@@ -1,0 +1,50 @@
+{
+    "name": "Zones",
+    "fields": [
+        {
+            "fieldName": "nomzone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "couverture",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cadastre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "population",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "qos",
+            "otherEntityRelationshipName": "zones",
+            "relationshipName": "qos"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "kpi",
+            "otherEntityRelationshipName": "zones",
+            "relationshipName": "kpi"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bts",
+            "otherEntityRelationshipName": "zones",
+            "relationshipName": "bts"
+        }
+    ],
+    "changelogDate": "20190729133720",
+    "entityTableName": "zones",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

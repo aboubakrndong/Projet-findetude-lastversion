@@ -1,0 +1,37 @@
+{
+    "name": "Taches",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datededebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "datedefin",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "technicien",
+            "otherEntityRelationshipName": "taches",
+            "relationshipName": "technicien",
+            "otherEntityField": "nom",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190729133724",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "taches",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

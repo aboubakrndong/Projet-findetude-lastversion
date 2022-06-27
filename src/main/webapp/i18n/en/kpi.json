@@ -1,0 +1,26 @@
+{
+  "operatappliApp": {
+    "kpi": {
+      "home": {
+        "title": "Kpis",
+        "createLabel": "Create a new Kpi",
+        "createOrEditLabel": "Create or edit a Kpi",
+        "search": "Search for Kpi",
+        "notFound": "No Kpi found"
+      },
+      "created": "A new Kpi is created with identifier {{ param }}",
+      "updated": "A Kpi is updated with identifier {{ param }}",
+      "deleted": "A Kpi is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Kpi {{ id }}?"
+      },
+      "detail": {
+        "title": "Kpi"
+      },
+      "tauxdappels": "Tauxdappels",
+      "tauxdepertes": "Tauxdepertes",
+      "tauxderejets": "Tauxderejets",
+      "zones": "Zones"
+    }
+  }
+}

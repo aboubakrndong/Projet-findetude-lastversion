@@ -1,0 +1,41 @@
+{
+    "name": "Bts",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "puissance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "etat",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "alertes",
+            "otherEntityRelationshipName": "bts",
+            "relationshipName": "alertes"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "zones",
+            "otherEntityRelationshipName": "bts",
+            "relationshipName": "zones",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190729133723",
+    "entityTableName": "bts",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

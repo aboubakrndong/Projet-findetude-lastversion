@@ -1,0 +1,58 @@
+<h2>Create Alertes</h2>
+
+<form [formGroup]='userFormGroup' (ngSubmit)='addAlerte()'  novalidate >
+
+    <div style="padding:10px 5px"><input class= "form-control" type="text" formControlName='destinataire' placeholder="Entrer destinataire"/> </div>
+
+    <div style="padding:10px 5px"> <input class= "form-control" type="text" formControlName='details' placeholder="Entrer details"/>
+    </div>
+
+    <mat-form-field color="primary">
+        <input  matInput [matDatepicker]="picker1" placeholder="Choisissez date ">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <div>  <mat-form-field>
+        <strong> <mat-label>Techniciens: </mat-label></strong>
+        <mat-select [(value)]="selectedValue" multiple>
+            <mat-option *ngFor="let technicien of listtechnicien" value="{{ technicien.id }}">{{ technicien.nom }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+
+    <div><mat-form-field>
+        <strong>  <mat-label>BTS: </mat-label> </strong>
+        <mat-select [(value)]="selectedValuebts" multiple>
+            <mat-option *ngFor="let bts of listdesbts" value="{{ bts.id }}">{{ bts.type }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+
+
+    <button class= 'btn btn-info'>Add Alertes</button>
+</form>
+
+
+<br><br>
+<table class ="table table-striped table-responsive">
+    <tr *ngFor="let z of zone">
+
+        <td>
+            {{destinataire}}
+        </td>
+        <td>
+            {{details}}
+        </td>
+        <td>
+            {{picker1}}
+        </td>
+        <td>
+            {{selectedValue}}
+        </td>
+        <td>
+            {{bts}}
+        </td>
+
+    </tr>
+</table>

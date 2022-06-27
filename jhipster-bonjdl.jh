@@ -1,0 +1,70 @@
+entity Qos {
+	traffic String,
+    tempsdereponse  String,
+    sensibilite String,
+    debit String
+}
+
+entity Zones {
+    nomzone String,
+    couverture String,
+    cadastre String,
+    population String
+    
+}
+
+entity Kpi {
+  tauxdappels String,
+  tauxdepertes String,
+  tauxderejets String
+}
+
+entity Alertes {
+   destinataire String,
+   details String,
+   date LocalDate
+
+}
+
+entity Bts {
+  type  String,
+  puissance String,
+  etat  String
+}
+
+// an ignored comment
+/** not an ignored comment */
+
+
+entity Taches {
+    type String, 
+    datededebut LocalDate,
+    datedefin LocalDate   
+}
+
+entity Technicien {	
+    nom String,
+    prenom String,
+    datedenaissance LocalDate,
+	specialite String,
+    email String,
+    domaine String
+}
+
+relationship OneToMany {	
+    Zones{qos} to Qos,
+    Zones{kpi} to Kpi,
+    Zones to Bts{zones},
+    Bts{alertes}  to Alertes{bts(type)}
+    
+
+}
+
+relationship ManyToMany {
+    Alertes{technicien(nom)} to Technicien{alertes},
+    Taches{technicien(nom)} to Technicien{taches}
+}
+
+
+
+

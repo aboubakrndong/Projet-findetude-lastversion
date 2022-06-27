@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="taches">
+            <h2><span jhiTranslate="operatappliApp.taches.detail.title">Taches</span> {{taches.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="operatappliApp.taches.type">Type</span></dt>
+                <dd>
+                    <span>{{taches.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.taches.datededebut">Datededebut</span></dt>
+                <dd>
+                    <span>{{taches.datededebut}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.taches.datedefin">Datedefin</span></dt>
+                <dd>
+                    <span>{{taches.datedefin}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.taches.technicien">Technicien</span></dt>
+                <dd>
+                    <span *ngFor="let technicien of taches.techniciens; let last = last">
+                        <a [routerLink]="['/technicien', technicien?.id, 'view' ]">{{technicien.nom}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/taches', taches.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "operatappliApp": {
+    "taches": {
+      "home": {
+        "title": "Taches",
+        "createLabel": "Créer un nouveau Taches",
+        "createOrEditLabel": "Créer ou éditer un Taches",
+        "search": "Recherche pour Taches",
+        "notFound": "Aucun Taches trouvé"
+      },
+      "created": "Un nouveau Taches a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Taches avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Taches avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Taches {{ id }} ?"
+      },
+      "detail": {
+        "title": "Taches"
+      },
+      "type": "Type",
+      "datededebut": "Datededebut",
+      "datedefin": "Datedefin",
+      "technicien": "Technicien"
+    }
+  }
+}

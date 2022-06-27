@@ -1,0 +1,27 @@
+{
+  "operatappliApp": {
+    "alertes": {
+      "home": {
+        "title": "Alertes",
+        "createLabel": "Create a new Alertes",
+        "createOrEditLabel": "Create or edit a Alertes",
+        "search": "Search for Alertes",
+        "notFound": "No Alertes found"
+      },
+      "created": "A new Alertes is created with identifier {{ param }}",
+      "updated": "A Alertes is updated with identifier {{ param }}",
+      "deleted": "A Alertes is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Alertes {{ id }}?"
+      },
+      "detail": {
+        "title": "Alertes"
+      },
+      "destinataire": "Destinataire",
+      "details": "Details",
+      "date": "Date",
+      "technicien": "Technicien",
+      "bts": "Bts"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Alertes.
+    -->
+    <changeSet id="20190729133722-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="alertes_id"
+                                 baseTableName="alertes_technicien"
+                                 constraintName="fk_alertes_technicien_alertes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="alertes"/>
+
+        <addForeignKeyConstraint baseColumnNames="technicien_id"
+                                 baseTableName="alertes_technicien"
+                                 constraintName="fk_alertes_technicien_technicien_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="technicien"/>
+        
+        <addForeignKeyConstraint baseColumnNames="bts_id"
+                                 baseTableName="alertes"
+                                 constraintName="fk_alertes_bts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bts"/>
+
+    </changeSet>
+</databaseChangeLog>

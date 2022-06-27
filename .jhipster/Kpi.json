@@ -1,0 +1,34 @@
+{
+    "name": "Kpi",
+    "fields": [
+        {
+            "fieldName": "tauxdappels",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tauxdepertes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tauxderejets",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "zones",
+            "otherEntityName": "zones",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190729133721",
+    "entityTableName": "kpi",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

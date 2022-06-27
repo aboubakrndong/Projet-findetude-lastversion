@@ -1,0 +1,27 @@
+{
+  "operatappliApp": {
+    "qos": {
+      "home": {
+        "title": "Qos",
+        "createLabel": "Créer un nouveau Qos",
+        "createOrEditLabel": "Créer ou éditer un Qos",
+        "search": "Recherche pour Qos",
+        "notFound": "Aucun Qos trouvé"
+      },
+      "created": "Un nouveau Qos a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Qos avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Qos avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Qos {{ id }} ?"
+      },
+      "detail": {
+        "title": "Qos"
+      },
+      "traffic": "Traffic",
+      "tempsdereponse": "Tempsdereponse",
+      "sensibilite": "Sensibilite",
+      "debit": "Debit",
+      "zones": "Zones"
+    }
+  }
+}

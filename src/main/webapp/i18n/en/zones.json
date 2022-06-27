@@ -1,0 +1,29 @@
+{
+  "operatappliApp": {
+    "zones": {
+      "home": {
+        "title": "Zones",
+        "createLabel": "Create a new Zones",
+        "createOrEditLabel": "Create or edit a Zones",
+        "search": "Search for Zones",
+        "notFound": "No Zones found"
+      },
+      "created": "A new Zones is created with identifier {{ param }}",
+      "updated": "A Zones is updated with identifier {{ param }}",
+      "deleted": "A Zones is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Zones {{ id }}?"
+      },
+      "detail": {
+        "title": "Zones"
+      },
+      "nomzone": "Nomzone",
+      "couverture": "Couverture",
+      "cadastre": "Cadastre",
+      "population": "Population",
+      "qos": "Qos",
+      "kpi": "Kpi",
+      "bts": "Bts"
+    }
+  }
+}

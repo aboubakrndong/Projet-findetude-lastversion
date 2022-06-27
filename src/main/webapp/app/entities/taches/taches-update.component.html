@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-taches-heading" jhiTranslate="operatappliApp.taches.home.createOrEditLabel">Create or edit a Taches</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.taches.type" for="field_type">Type</label>
+                    <input type="text" class="form-control" name="type" id="field_type"
+                           formControlName="type"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.taches.datededebut" for="field_datededebut">Datededebut</label>
+                    <div class="input-group">
+                        <input id="field_datededebut" type="text" class="form-control" name="datededebut" ngbDatepicker  #datededebutDp="ngbDatepicker" formControlName="datededebut"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="datededebutDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.taches.datedefin" for="field_datedefin">Datedefin</label>
+                    <div class="input-group">
+                        <input id="field_datedefin" type="text" class="form-control" name="datedefin" ngbDatepicker  #datedefinDp="ngbDatepicker" formControlName="datedefin"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="datedefinDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="operatappliApp.taches.technicien" for="field_techniciens">Technicien</label>
+                    <select class="form-control" id="field_techniciens" multiple name="techniciens" formControlName="techniciens">
+                        <option [ngValue]="getSelected(editForm.get('techniciens').value, technicienOption)" *ngFor="let technicienOption of techniciens; trackBy: trackTechnicienById">{{technicienOption.nom}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

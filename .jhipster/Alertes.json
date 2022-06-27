@@ -1,0 +1,43 @@
+{
+    "name": "Alertes",
+    "fields": [
+        {
+            "fieldName": "destinataire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "details",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "technicien",
+            "otherEntityRelationshipName": "alertes",
+            "relationshipName": "technicien",
+            "otherEntityField": "nom",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bts",
+            "otherEntityRelationshipName": "alertes",
+            "relationshipName": "bts",
+            "otherEntityField": "type"
+        }
+    ],
+    "changelogDate": "20190729133722",
+    "entityTableName": "alertes",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

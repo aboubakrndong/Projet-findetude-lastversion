@@ -1,0 +1,27 @@
+{
+  "operatappliApp": {
+    "bts": {
+      "home": {
+        "title": "Bts",
+        "createLabel": "Créer un nouveau Bts",
+        "createOrEditLabel": "Créer ou éditer un Bts",
+        "search": "Recherche pour Bts",
+        "notFound": "Aucun Bts trouvé"
+      },
+      "created": "Un nouveau Bts a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Bts avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Bts avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Bts {{ id }} ?"
+      },
+      "detail": {
+        "title": "Bts"
+      },
+      "type": "Type",
+      "puissance": "Puissance",
+      "etat": "Etat",
+      "alertes": "Alertes",
+      "zones": "Zones"
+    }
+  }
+}

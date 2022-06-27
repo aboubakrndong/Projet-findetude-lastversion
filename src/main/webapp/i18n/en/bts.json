@@ -1,0 +1,27 @@
+{
+  "operatappliApp": {
+    "bts": {
+      "home": {
+        "title": "Bts",
+        "createLabel": "Create a new Bts",
+        "createOrEditLabel": "Create or edit a Bts",
+        "search": "Search for Bts",
+        "notFound": "No Bts found"
+      },
+      "created": "A new Bts is created with identifier {{ param }}",
+      "updated": "A Bts is updated with identifier {{ param }}",
+      "deleted": "A Bts is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bts {{ id }}?"
+      },
+      "detail": {
+        "title": "Bts"
+      },
+      "type": "Type",
+      "puissance": "Puissance",
+      "etat": "Etat",
+      "alertes": "Alertes",
+      "zones": "Zones"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="zones">
+            <h2><span jhiTranslate="operatappliApp.zones.detail.title">Zones</span> {{zones.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="operatappliApp.zones.nomzone">Nomzone</span></dt>
+                <dd>
+                    <span>{{zones.nomzone}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.zones.couverture">Couverture</span></dt>
+                <dd>
+                    <span>{{zones.couverture}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.zones.cadastre">Cadastre</span></dt>
+                <dd>
+                    <span>{{zones.cadastre}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.zones.population">Population</span></dt>
+                <dd>
+                    <span>{{zones.population}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/zones', zones.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

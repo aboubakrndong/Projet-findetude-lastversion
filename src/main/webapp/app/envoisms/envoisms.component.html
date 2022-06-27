@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="leform" >
+    <div class="form-groups">
+        <label for="destina">
+            Selectionner le destinataire
+        </label>
+
+        <select id="destina" class="form-control" name ="destina" [ngModel]="dest" required >
+            <option value="764125780">Momodou Faye</option>
+            <option value="778692808">Ousmane Dieng</option>
+            <option value="778692808">Michel Seck</option>
+            <option value="778692808">Adama Ly</option>
+        </select>
+    </div>
+
+    <div class="monform">
+        <label for="msg">
+            Entrez le message
+        </label>
+        <textarea id="msg" name="msg" style="width:360px;height:70px;"></textarea>
+    </div>
+    <p></p>
+    <p></p>
+    <div style="margin-top:65px; ">
+        <button style="width: 150px" class="btn btn-primary"  type="submit" [disabled]="f.invalid">Envoyer</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button style="width: 150px" class="btn btn btn-danger" (click)="onClose()" type="submit" mat-dialog-close>Annuler</button>
+    </div>
+
+</form>
+

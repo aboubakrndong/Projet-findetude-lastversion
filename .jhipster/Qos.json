@@ -1,0 +1,38 @@
+{
+    "name": "Qos",
+    "fields": [
+        {
+            "fieldName": "traffic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tempsdereponse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sensibilite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "debit",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "zones",
+            "otherEntityName": "zones",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190729133719",
+    "entityTableName": "qos",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

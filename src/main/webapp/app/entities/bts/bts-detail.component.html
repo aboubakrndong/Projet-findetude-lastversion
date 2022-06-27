@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bts">
+            <h2><span jhiTranslate="operatappliApp.bts.detail.title">Bts</span> {{bts.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="operatappliApp.bts.type">Type</span></dt>
+                <dd>
+                    <span>{{bts.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.bts.puissance">Puissance</span></dt>
+                <dd>
+                    <span>{{bts.puissance}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.bts.etat">Etat</span></dt>
+                <dd>
+                    <span>{{bts.etat}}</span>
+                </dd>
+                <dt><span jhiTranslate="operatappliApp.bts.zones">Zones</span></dt>
+                <dd>
+                    <div *ngIf="bts.zones">
+                        <a [routerLink]="['/zones', bts.zones?.id, 'view']">{{bts.zones?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/bts', bts.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

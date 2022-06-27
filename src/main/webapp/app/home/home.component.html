@@ -1,0 +1,98 @@
+ <mgl-map class="mglmap"
+             [style]="style"
+             [zoom]="[6]"
+             [center]="[-6.5025222, 7.468279]"
+    >
+        <!-- code des boutons-->
+
+    <mgl-control mglFullscreen></mgl-control>
+    <mgl-control mglNavigation></mgl-control>
+
+    <!--Marker pour dakar -->
+    <mgl-marker
+        #myMarker
+        [lngLat]="[-17.456724, 14.726945]"
+    >
+        <div class="marker">
+        </div>
+    </mgl-marker>
+    <mgl-popup
+        [marker]="myMarker"
+    >
+        <h3> Département de dakar !!</h3>
+    </mgl-popup>
+
+
+    <!-- fin Marker pour dakar -->
+
+
+    <!--Marker pour rufisque -->
+    <mgl-marker
+        #myMarkerru
+        [lngLat]="[ -17.2749633, 14.7172412]"
+    >
+        <div
+            class="marker"
+        >
+
+        </div>
+    </mgl-marker>
+    <mgl-popup
+        [marker]="myMarkerru"
+    >
+        <h3> Département de rufisque  !! </h3>
+    </mgl-popup>
+
+    <!-- Fin Marker pour rufisque -->
+
+    <!--Marker pour guediawaye -->
+
+    <mgl-marker
+        #myMarkergue
+        [lngLat]="[-17.381287,  14.789556]"
+    >
+        <div
+            class="marker"
+        >
+        </div>
+    </mgl-marker>
+    <mgl-popup
+        [marker]="myMarkergue"
+    >
+        <h3>   Département de guediawaye  !! </h3>
+    </mgl-popup>
+
+    <!-- fin Marker pour guediawaye -->
+
+    <!-- Marker Pour pikine -->
+
+    <mgl-marker
+        #myMarkerpi
+        [lngLat]="[ -17.397699 , 14.744596]"
+    >
+        <div
+            class="marker"
+        >
+        </div>
+    </mgl-marker>
+    <mgl-popup
+        [marker]="myMarkerpi"
+    >
+        <h3>  Département de pikine  !!</h3>
+    </mgl-popup>
+
+    <!--fin Marker pour pikine-->
+
+</mgl-map>
+
+<!--changer la vue-->
+
+<mat-radio-group [ngModel]="layerId" (ngModelChange)="changeStyle($event)">
+    <mat-label class="labelvue">  Choisir la vue : </mat-label>
+    <mat-radio-button value="basic">basic</mat-radio-button>
+    <mat-radio-button value="streets">streets</mat-radio-button>
+    <mat-radio-button value="satellite">satellite</mat-radio-button>
+</mat-radio-group>
+
+<!--fin code pour changer la vue-->
+

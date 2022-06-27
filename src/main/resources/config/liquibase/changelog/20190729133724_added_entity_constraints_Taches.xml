@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Taches.
+    -->
+    <changeSet id="20190729133724-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="taches_id"
+                                 baseTableName="taches_technicien"
+                                 constraintName="fk_taches_technicien_taches_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="taches"/>
+
+        <addForeignKeyConstraint baseColumnNames="technicien_id"
+                                 baseTableName="taches_technicien"
+                                 constraintName="fk_taches_technicien_technicien_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="technicien"/>
+        
+    </changeSet>
+</databaseChangeLog>

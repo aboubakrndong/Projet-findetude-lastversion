@@ -1,0 +1,26 @@
+{
+  "operatappliApp": {
+    "taches": {
+      "home": {
+        "title": "Taches",
+        "createLabel": "Create a new Taches",
+        "createOrEditLabel": "Create or edit a Taches",
+        "search": "Search for Taches",
+        "notFound": "No Taches found"
+      },
+      "created": "A new Taches is created with identifier {{ param }}",
+      "updated": "A Taches is updated with identifier {{ param }}",
+      "deleted": "A Taches is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Taches {{ id }}?"
+      },
+      "detail": {
+        "title": "Taches"
+      },
+      "type": "Type",
+      "datededebut": "Datededebut",
+      "datedefin": "Datedefin",
+      "technicien": "Technicien"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "operatappliApp": {
+    "technicien": {
+      "home": {
+        "title": "Techniciens",
+        "createLabel": "Créer un nouveau Technicien",
+        "createOrEditLabel": "Créer ou éditer un Technicien",
+        "search": "Recherche pour Technicien",
+        "notFound": "Aucun Technicien trouvé"
+      },
+      "created": "Un nouveau Technicien a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Technicien avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Technicien avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Technicien {{ id }} ?"
+      },
+      "detail": {
+        "title": "Technicien"
+      },
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "datedenaissance": "Datedenaissance",
+      "specialite": "Specialite",
+      "email": "Email",
+      "domaine": "Domaine",
+      "alertes": "Alertes",
+      "taches": "Taches"
+    }
+  }
+}

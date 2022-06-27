@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-qos-heading" jhiTranslate="operatappliApp.qos.home.createOrEditLabel">Create or edit a Qos</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.qos.traffic" for="field_traffic">Traffic</label>
+                    <input type="text" class="form-control" name="traffic" id="field_traffic"
+                           formControlName="traffic"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.qos.tempsdereponse" for="field_tempsdereponse">Tempsdereponse</label>
+                    <input type="text" class="form-control" name="tempsdereponse" id="field_tempsdereponse"
+                           formControlName="tempsdereponse"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.qos.sensibilite" for="field_sensibilite">Sensibilite</label>
+                    <input type="text" class="form-control" name="sensibilite" id="field_sensibilite"
+                           formControlName="sensibilite"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.qos.debit" for="field_debit">Debit</label>
+                    <input type="text" class="form-control" name="debit" id="field_debit"
+                           formControlName="debit"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="operatappliApp.qos.zones" for="field_zones">Zones</label>
+                    <select class="form-control" id="field_zones" name="zones" formControlName="zones">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="zonesOption.id === editForm.get('zones').value?.id ? editForm.get('zones').value : zonesOption" *ngFor="let zonesOption of zones; trackBy: trackZonesById">{{zonesOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

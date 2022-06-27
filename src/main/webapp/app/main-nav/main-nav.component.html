@@ -1,0 +1,103 @@
+<!-- -->
+
+
+<!--
+<mat-sidenav-container class="sidenav-container">
+
+    &lt;!&ndash; debut code du  side nav&ndash;&gt;
+
+    <mat-sidenav #drawer mode="over"  opened="false" role="navigation" class="sidenav" fixedInViewport>
+    <mat-toolbar>Choisissez une zone</mat-toolbar>
+        <p></p>
+        <mat-form-field>
+            <mat-label> Zone:</mat-label>
+            <mat-select [(value)]="selectedValue" (selectionChange)="getZoneById($event)">
+                <mat-option *ngFor="let zone of listzone" value="{{ zone.id }}">{{ zone.nomzone }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div *ngIf="selectedValue">
+
+        <p>Informations de la zone</p>
+
+        &lt;!&ndash; code du tableau&ndash;&gt;
+        <cdk-virtual-scroll-viewport itemSize="100" class="container" >
+            <ul>
+                <li> Nom Zone: {{ zone?.nomzone}}</li>
+                <li> Couverture: {{ zone?.couverture}}</li>
+                <li> Population: {{ zone?.population}}</li>
+                <li> Cadastre: {{ zone?.cadastre}}</li>
+                <li> BTS:
+                    <ul *ngFor="let bts of zone.bts">
+                        <li> Etat: {{ bts.etat}}</li>
+                        <li> Puissance: {{ bts.puissance}}</li>
+                    </ul>
+                </li>
+            </ul>
+
+            &lt;!&ndash;<mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="classtable">
+                &lt;!&ndash; Propriete Column &ndash;&gt;
+                <ng-container matColumnDef="nomzone"  >
+                    <mat-header-cell *matHeaderCellDef> Nom Zone </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{zone.nomzone}} </mat-cell>
+                </ng-container>
+
+                &lt;!&ndash; valeur Column &ndash;&gt;
+                <ng-container matColumnDef="population">
+                    <mat-header- *matHeaderCellDef> Populations </mat-header->
+                    <mat-cell *matCellDef="let element"> {{zone.population}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="cadastre">
+                    <mat-header-cell *matHeaderCellDef> Cadastre </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{zone.cadastre}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="couverture">
+                    <mat-header-cell *matHeaderCellDef> Couverture </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{zone.couverture}} </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns ; sticky: true"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>&ndash;&gt;
+
+        </cdk-virtual-scroll-viewport>
+
+            <p></p>
+        <button> Modifier </button> <button>Télécharger</button> <button>Partager</button>
+
+        </div>
+        &lt;!&ndash; fin code tableau&ndash;&gt;
+
+    </mat-sidenav>
+
+
+    &lt;!&ndash; fin code du side nav&ndash;&gt;
+
+
+
+    &lt;!&ndash; debut bar de menu &ndash;&gt;
+    <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">swap_horizontal_circle
+        </mat-icon>
+      </button>
+      <span>appli atos</span>
+    </mat-toolbar>
+    &lt;!&ndash; Add Content Here &ndash;&gt;
+      <ng-content></ng-content>
+  </mat-sidenav-content>
+
+    &lt;!&ndash; fin bar de menu&ndash;&gt;
+
+
+</mat-sidenav-container>
+
+
+-->
